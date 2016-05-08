@@ -48,13 +48,13 @@ act[sample(1:nrow(act), 6), ]
 ```
 
 ```
-##      steps       date interval
-## 5550     0 2012-10-20      625
-## 3590     0 2012-10-13     1105
-## 6491    13 2012-10-23     1250
-## 3604   429 2012-10-13     1215
-## 9822    NA 2012-11-04      225
-## 132     NA 2012-10-01     1055
+##       steps       date interval
+## 2354      0 2012-10-09      405
+## 2609      0 2012-10-10      120
+## 9206     NA 2012-11-01     2305
+## 8713      0 2012-10-31      600
+## 1212      0 2012-10-05      455
+## 12087     0 2012-11-11     2310
 ```
 
 For further analysis and for creation of plots I loaded the ```dplyr``` package and the ```ggplot2``` package.
@@ -105,7 +105,7 @@ ggplot(spd, aes(steps)) +
         xlab("Number of steps per day") 
 ```
 
-![](PA1_template_files/figure-html/hist_steps_per_day-1.png)
+![](PA1_template_files/figure-html/hist_steps_per_day-1.png)<!-- -->
 
 ### Mean and median values of steps per day
 
@@ -170,7 +170,7 @@ ggplot(spi, aes(interval, steps)) +
         ylab("Average number of steps")
 ```
 
-![](PA1_template_files/figure-html/daily_activity_pattern-1.png)
+![](PA1_template_files/figure-html/daily_activity_pattern-1.png)<!-- -->
 
 ### Interval with most steps
 
@@ -312,7 +312,7 @@ ggplot(spd.mod, aes(steps)) +
         xlab("Number of steps per day")
 ```
 
-![](PA1_template_files/figure-html/hist_mod_steps_per_day-1.png)
+![](PA1_template_files/figure-html/hist_mod_steps_per_day-1.png)<!-- -->
 
 ### Mean and median values of steps per day (with imputed values)
 
@@ -356,7 +356,7 @@ ggplot(spd.mod, aes(steps)) +
         xlab("Number of steps per day") 
 ```
 
-![](PA1_template_files/figure-html/impact_of_imputing-1.png)
+![](PA1_template_files/figure-html/impact_of_imputing-1.png)<!-- -->
 
 The graph shows that by imputing missing values I created a spike around the mean value. The distribution changed with a bias towards the mean. It can be assumed that the real data would have been more evenly spread.
 
@@ -457,13 +457,13 @@ wd[sample(1:nrow(wd), 6), ]
 ```
 
 ```
-##     interval day.type        steps
-## 309      140  Weekend   0.02122642
-## 176     1435  Weekday  14.51236897
-## 431     1150  Weekend  34.56721698
-## 529     2000  Weekend  37.14033019
-## 109      900  Weekday 167.66037736
-## 549     2140  Weekend  13.02240566
+##     interval day.type     steps
+## 366      625  Weekend 10.634434
+## 547     2130  Weekend 19.895047
+## 403      930  Weekend 87.838443
+## 79       630  Weekday 66.442348
+## 120      955  Weekday 17.629769
+## 557     2220  Weekend  0.884434
 ```
 
 Then I created a panel plot containing a time series plot (line plot) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
@@ -478,7 +478,7 @@ ggplot(wd, aes(interval, steps)) +
         ylab("Number of steps")
 ```
 
-![](PA1_template_files/figure-html/panel_activity_pattern-1.png)
+![](PA1_template_files/figure-html/panel_activity_pattern-1.png)<!-- -->
 
 From the plot I made a few observations:  
 
